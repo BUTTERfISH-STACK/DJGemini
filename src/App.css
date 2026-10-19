@@ -1,0 +1,1558 @@
+#root {
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  height: 82px;
+  padding: 0 6.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(9, 9, 9, .96);
+  border-bottom: 1px solid rgba(217, 182, 108, .16);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 43px;
+  line-height: .9;
+  font-weight: 900;
+  letter-spacing: -3px;
+  color: var(--white);
+}
+
+.brand-mark > span {
+  color: var(--gold);
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-copy strong {
+  font-size: 12px;
+  letter-spacing: 2.3px;
+  font-weight: 700;
+}
+
+.brand-copy small {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: var(--gold);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.4vw, 36px);
+}
+
+.navigation > a {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .6px;
+  color: #c7c2b8;
+  transition: color .2s ease;
+}
+
+.navigation > a:hover {
+  color: var(--gold);
+}
+
+.navigation .nav-book {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 12px 15px;
+  white-space: nowrap;
+}
+
+.nav-book span {
+  padding-left: 9px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--gold);
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 660px;
+  height: min(790px, calc(100svh - 82px));
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 65px 10.5%;
+  isolation: isolate;
+  background: #111;
+}
+
+.hero-image, .hero-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.hero-image {
+  background-image: url('https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=2200&q=85');
+  background-size: cover;
+  background-position: center 42%;
+  opacity: .76;
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(7,7,7,.97) 0%, rgba(7,7,7,.83) 38%, rgba(7,7,7,.28) 100%),
+    linear-gradient(0deg, #090909 0%, transparent 26%, transparent 78%, rgba(0,0,0,.25) 100%);
+}
+
+.hero-content {
+  max-width: 720px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow, .section-kicker {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2.6px;
+  font-weight: 700;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 24px;
+}
+
+.eyebrow > span {
+  width: 26px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero h1, .section-pad h2, .statement h2, .contact-band h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: -.7px;
+  line-height: .91;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: clamp(65px, 10vw, 124px);
+}
+
+.hero h1 em, h2 em {
+  font-style: normal;
+  color: var(--gold);
+}
+
+.hero-description {
+  max-width: 410px;
+  margin: 24px 0 30px;
+  color: #c5c0b7;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  min-height: 49px;
+  padding: 0 19px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.button span {
+  font-size: 15px;
+}
+
+.button-gold {
+  background: var(--gold);
+  color: #11100d;
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+}
+
+.button-outline {
+  background: rgba(10,10,10,.28);
+  color: var(--white);
+  border-color: rgba(244,240,232,.35);
+}
+
+.button-outline:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.hero-note {
+  margin-top: 53px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: #b7b1a5;
+}
+
+.note-line {
+  width: 34px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-side-label {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%);
+  color: rgba(240,216,156,.75);
+  font-size: 9px;
+  letter-spacing: 2.5px;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 31px;
+  left: 10.5%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #a7a197;
+}
+
+.scroll-cue span {
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-pad {
+  padding: 105px 10.5%;
+}
+
+.intro {
+  background: #0c0c0b;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 70px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.section-pad h2, .contact-band h2 {
+  font-size: clamp(52px, 6vw, 77px);
+}
+
+.intro-copy {
+  padding-top: 4px;
+  max-width: 450px;
+}
+
+.intro-copy p, .booking-copy > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+  margin: 0 0 17px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 17px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  margin-top: 13px;
+}
+
+.text-link span {
+  font-size: 16px;
+}
+
+.experience-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 77px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-strip > div {
+  min-height: 88px;
+  padding: 20px 17px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-right: 1px solid var(--line);
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.experience-strip > div:first-child {
+  padding-left: 0;
+}
+
+.experience-strip > div:last-child {
+  border-right: 0;
+}
+
+.strip-number {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.music {
+  background: #11110f;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+
+.section-heading h2 {
+  margin-top: 22px;
+}
+
+.section-heading > p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  padding-bottom: 5px;
+}
+
+.music-list {
+  border-top: 1px solid var(--line);
+}
+
+.music-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 30px;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 7px;
+  border-bottom: 1px solid var(--line);
+  transition: background .2s ease, padding .2s ease;
+}
+
+.music-row:hover {
+  background: rgba(217,182,108,.04);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.music-number {
+  color: var(--gold);
+  font-size: 11px;
+}
+
+.music-row h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.music-row p {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.music-arrow {
+  color: var(--gold);
+  text-align: right;
+  font-size: 19px;
+}
+
+.music-footnote {
+  margin-top: 22px;
+  color: #827d73;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.statement {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  padding: 85px 10.5%;
+  background: #111;
+}
+
+.statement-image, .statement-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.statement-image {
+  background: url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1800&q=80') center 50% / cover;
+  opacity: .62;
+}
+
+.statement-overlay {
+  background: linear-gradient(90deg, rgba(5,5,5,.95), rgba(5,5,5,.6) 58%, rgba(5,5,5,.24));
+}
+
+.statement-content {
+  width: 100%;
+}
+
+.statement-content .section-kicker {
+  margin-bottom: 22px;
+}
+
+.statement-content > p, .statement-content h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(47px, 7vw, 78px);
+  font-weight: 800;
+  line-height: .92;
+  margin: 0;
+}
+
+.statement-content > p {
+  color: var(--white);
+}
+
+.statement-content h2 {
+  margin: 0 0 27px;
+}
+
+.gallery {
+  background: #0c0c0b;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 230px 230px;
+  gap: 15px;
+}
+
+.gallery-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  background: #191815;
+}
+
+.gallery-card-1 {
+  grid-row: span 2;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .76;
+  transition: transform .5s ease, opacity .5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.04);
+  opacity: .95;
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.82), transparent 60%);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+.gallery-caption > span {
+  font-size: 8px;
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.gallery-caption h3 {
+  margin: 8px 0 0;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.gallery-index {
+  position: absolute;
+  right: 17px;
+  top: 16px;
+  font-size: 10px;
+  color: var(--gold-light);
+}
+
+.gallery-disclaimer {
+  margin-top: 17px;
+  color: #79746b;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.booking {
+  background: #11110f;
+}
+
+.booking-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: clamp(35px, 7vw, 100px);
+  align-items: start;
+}
+
+.booking-copy h2 {
+  margin: 26px 0;
+}
+
+.booking-copy > p {
+  max-width: 400px;
+}
+
+.booking-contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 21px 0;
+  margin-top: 27px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-symbol {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  font-size: 21px;
+}
+
+.booking-contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.booking-contact small {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+.booking-contact strong {
+  font-size: 17px;
+  letter-spacing: .4px;
+}
+
+.booking-copy .response-note {
+  margin-top: 15px;
+  font-size: 10px;
+  color: #8b857b;
+}
+
+.booking-form {
+  border: 1px solid var(--line);
+  padding: clamp(20px, 3vw, 36px);
+  background: #0c0c0b;
+}
+
+.form-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 22px;
+  margin-bottom: 23px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.form-step {
+  color: var(--gold);
+  font-size: 9px;
+}
+
+.booking-form label {
+  display: block;
+  margin: 0 0 9px;
+  color: #c8c1b5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #343128;
+  border-radius: 0;
+  background: #141411;
+  color: var(--white);
+  padding: 13px 12px;
+  margin: 0 0 20px;
+  outline: none;
+  font-size: 12px;
+  color-scheme: dark;
+}
+
+.booking-form input::placeholder,
+.booking-form textarea::placeholder {
+  color: #777268;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--gold);
+}
+
+.booking-form select {
+  appearance: auto;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+}
+
+.form-field {
+  min-width: 0;
+}
+
+.form-submit {
+  width: 100%;
+  border: 0;
+  min-height: 52px;
+  margin-top: 1px;
+}
+
+.form-privacy {
+  margin: 13px 0 0;
+  color: #817b71;
+  text-align: center;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+.contact-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 53px 10.5%;
+  background: #181711;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-band h2 {
+  margin-top: 13px;
+  font-size: clamp(40px, 5vw, 60px);
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 25px;
+  padding: 39px 6.2% 0;
+  background: #080808;
+}
+
+.footer-brand {
+  justify-self: start;
+}
+
+.footer > p {
+  text-align: center;
+  color: #938d82;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.back-top {
+  justify-self: end;
+  color: var(--gold);
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.footer-bottom {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 19px 0;
+  margin-top: 15px;
+  border-top: 1px solid rgba(217,182,108,.14);
+  color: #777168;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+@media (min-width: 1500px) {
+  .hero, .section-pad, .statement, .contact-band {
+    padding-left: max(10.5%, calc((100% - 1180px) / 2));
+    padding-right: max(10.5%, calc((100% - 1180px) / 2));
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    padding: 0 5%;
+  }
+
+  .navigation {
+    gap: 15px;
+  }
+
+  .navigation > a {
+    font-size: 10px;
+  }
+
+  .navigation .nav-book {
+    padding: 11px 10px;
+  }
+
+  .hero {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .section-pad, .statement, .contact-band {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .intro-grid {
+    gap: 35px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 30px;
+  }
+
+  .scroll-cue {
+    left: 8%;
+  }
+}
+
+@media (max-width: 680px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  .header {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .brand-mark {
+    font-size: 39px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 21px;
+    min-width: 43px;
+    min-height: 42px;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 20px 22px;
+    background: #0b0b0a;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .navigation.navigation-open {
+    display: flex;
+  }
+
+  .navigation > a {
+    padding: 15px 5px;
+    border-bottom: 1px solid rgba(217,182,108,.12);
+    font-size: 12px;
+  }
+
+  .navigation .nav-book {
+    margin-top: 12px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--gold);
+  }
+
+  .hero {
+    height: auto;
+    min-height: 690px;
+    padding: 90px 25px 85px;
+    align-items: center;
+  }
+
+  .hero-image {
+    background-position: 58% center;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(7,7,7,.9), rgba(7,7,7,.47)),
+      linear-gradient(0deg, #090909 0%, transparent 30%, rgba(0,0,0,.2) 100%);
+  }
+
+  .eyebrow, .section-kicker {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: clamp(64px, 16vw, 100px);
+  }
+
+  .hero-description {
+    max-width: 350px;
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 340px;
+  }
+
+  .button {
+    min-height: 51px;
+    padding: 0 13px;
+    font-size: 9px;
+  }
+
+  .hero-note {
+    margin-top: 37px;
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .hero-side-label {
+    display: none;
+  }
+
+  .scroll-cue {
+    left: 25px;
+    bottom: 24px;
+  }
+
+  .section-pad {
+    padding: 73px 24px;
+  }
+
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 29px;
+  }
+
+  .section-pad h2 {
+    font-size: clamp(52px, 13vw, 72px);
+  }
+
+  .intro-copy p, .booking-copy > p {
+    font-size: 12px;
+  }
+
+  .experience-strip {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .experience-strip > div {
+    min-height: 65px;
+    padding: 13px 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .experience-strip > div:last-child {
+    border-bottom: 0;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .section-heading h2 {
+    margin-top: 19px;
+  }
+
+  .section-heading > p {
+    margin-top: 20px;
+  }
+
+  .music-row {
+    grid-template-columns: 30px 1fr 20px;
+    gap: 11px;
+    padding: 20px 0;
+  }
+
+  .music-row h3 {
+    font-size: 25px;
+  }
+
+  .music-row p {
+    grid-column: 2;
+    grid-row: 2;
+    margin: -6px 0 0;
+    line-height: 1.6;
+  }
+
+  .music-arrow {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .statement {
+    min-height: 370px;
+    padding: 72px 24px;
+  }
+
+  .statement-content > p, .statement-content h2 {
+    font-size: clamp(49px, 12vw, 68px);
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 270px repeat(4, 210px);
+    gap: 12px;
+  }
+
+  .gallery-card-1 {
+    grid-row: auto;
+  }
+
+  .gallery-caption {
+    left: 19px;
+    bottom: 20px;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .booking-copy h2 {
+    margin: 22px 0;
+  }
+
+  .booking-form {
+    padding: 21px 16px;
+  }
+
+  .form-row {
+    gap: 10px;
+  }
+
+  .booking-form input, .booking-form select, .booking-form textarea {
+    padding: 12px 9px;
+    font-size: 12px;
+  }
+
+  .contact-band {
+    padding: 42px 24px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .contact-band h2 {
+    font-size: 48px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr auto;
+    padding: 30px 22px 0;
+    gap: 20px;
+  }
+
+  .footer > p {
+    display: none;
+  }
+
+  .footer-bottom {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 370px) {
+  .brand-copy strong {
+    font-size: 11px;
+  }
+
+  .brand-copy small {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    padding-left: 19px;
+    padding-right: 19px;
+  }
+
+  .hero h1 {
+    font-size: 61px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+
+/* DJ GEMINI: ambient motion and visual polish */
+.hero {
+  overflow: hidden;
+}
+
+.hero-image {
+  animation: gemini-cinematic-zoom 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: -20%;
+  pointer-events: none;
+  opacity: .52;
+  background:
+    radial-gradient(ellipse at 72% 30%, rgba(217,182,108,.17), transparent 29%),
+    radial-gradient(ellipse at 45% 75%, rgba(217,182,108,.10), transparent 35%);
+  background-size: 140% 140%;
+  animation: gemini-light-drift 13s ease-in-out infinite alternate;
+}
+
+.hero-content,
+.hero-side-label,
+.scroll-cue {
+  z-index: 2;
+}
+
+.hero .eyebrow > span {
+  box-shadow: 0 0 12px rgba(217,182,108,.7);
+  animation: gemini-pulse 2.4s ease-in-out infinite;
+}
+
+.intro,
+.music,
+.gallery,
+.booking {
+  position: relative;
+  isolation: isolate;
+}
+
+.music::before,
+.booking::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217,182,108,.075), transparent 68%);
+  animation: gemini-orbit-glow 15s ease-in-out infinite alternate;
+}
+
+.music::before {
+  top: 5%;
+  right: -180px;
+}
+
+.booking::before {
+  bottom: 0;
+  left: -190px;
+}
+
+.statement {
+  overflow: hidden;
+}
+
+.statement::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(217,182,108,.09) 50%, transparent 68%);
+  background-size: 220% 100%;
+  animation: gemini-light-sweep 12s ease-in-out infinite;
+}
+
+.statement-content {
+  position: relative;
+  z-index: 1;
+}
+
+.statement-image {
+  animation: gemini-cinematic-zoom 32s ease-in-out infinite alternate-reverse;
+}
+
+.music-row {
+  position: relative;
+  overflow: hidden;
+}
+
+.music-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width .35s ease;
+}
+
+.music-row:hover::after {
+  width: 100%;
+}
+
+.gallery-card {
+  transform: translateZ(0);
+}
+
+.gallery-card img {
+  will-change: transform;
+}
+
+.gallery-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 1px solid rgba(217,182,108,0);
+  transition: border-color .35s ease;
+}
+
+.gallery-card:hover::after {
+  border-color: rgba(217,182,108,.65);
+}
+
+.button-gold {
+  box-shadow: 0 0 0 rgba(217,182,108,0);
+}
+
+.button-gold:hover {
+  box-shadow: 0 0 24px rgba(217,182,108,.18);
+}
+
+@keyframes gemini-cinematic-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.075); }
+}
+
+@keyframes gemini-light-drift {
+  0% { transform: translate3d(-2%, -1%, 0) rotate(0deg); }
+  100% { transform: translate3d(2%, 2%, 0) rotate(7deg); }
+}
+
+@keyframes gemini-orbit-glow {
+  0% { transform: translate3d(0, 0, 0) scale(.92); opacity: .55; }
+  100% { transform: translate3d(-35px, 22px, 0) scale(1.12); opacity: 1; }
+}
+
+@keyframes gemini-light-sweep {
+  0%, 35% { background-position: 150% 0; }
+  70%, 100% { background-position: -100% 0; }
+}
+
+@keyframes gemini-pulse {
+  0%, 100% { opacity: .65; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero::after,
+  .hero .eyebrow > span,
+  .music::before,
+  .booking::before,
+  .statement::after,
+  .statement-image {
+    animation: none !important;
+  }
+
+  .gallery-card img {
+    transition: none !important;
+  }
+}
+
+
+/* SITE-WIDE AMBIENT LAYER — stays behind content while the visitor scrolls */
+html {
+  background: #090909;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 0%, #17140e 0%, #090909 50%);
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -18%;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, background-position, opacity;
+}
+
+body::before {
+  z-index: 0;
+  opacity: .78;
+  background:
+    radial-gradient(ellipse at 18% 24%, rgba(202, 158, 71, .14), transparent 26%),
+    radial-gradient(ellipse at 82% 38%, rgba(217, 182, 108, .12), transparent 29%),
+    radial-gradient(ellipse at 48% 82%, rgba(161, 111, 35, .11), transparent 32%),
+    radial-gradient(circle at 13% 65%, rgba(240, 216, 156, .28) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 21%, rgba(240, 216, 156, .22) 0 1px, transparent 2px),
+    radial-gradient(circle at 84% 77%, rgba(240, 216, 156, .20) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 43%, rgba(240, 216, 156, .16) 0 1px, transparent 2px);
+  background-size:
+    150% 150%, 150% 150%, 150% 150%,
+    180px 190px, 230px 220px, 260px 240px, 210px 230px;
+  animation: site-ambient-drift 24s ease-in-out infinite alternate;
+}
+
+body::after {
+  z-index: 0;
+  opacity: .22;
+  background:
+    repeating-linear-gradient(
+      118deg,
+      transparent 0 105px,
+      rgba(217, 182, 108, .09) 106px,
+      transparent 108px 220px
+    ),
+    linear-gradient(
+      112deg,
+      transparent 30%,
+      rgba(217, 182, 108, .13) 48%,
+      transparent 61%
+    );
+  background-size: 100% 100%, 240% 100%;
+  animation: site-ambient-sweep 32s linear infinite;
+}
+
+/* Keep all page content above the fixed background effects. */
+#root {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  background: transparent;
+}
+
+/* Slight transparency reveals the background without reducing text contrast. */
+.header {
+  background: rgba(9, 9, 9, .92);
+}
+
+.intro {
+  background: rgba(12, 12, 11, .88);
+}
+
+.music {
+  background: rgba(17, 17, 15, .86);
+}
+
+.gallery {
+  background: rgba(12, 12, 11, .88);
+}
+
+.booking {
+  background: rgba(17, 17, 15, .89);
+}
+
+.contact-band {
+  background: rgba(24, 23, 17, .91);
+}
+
+.footer {
+  background: rgba(8, 8, 8, .94);
+}
+
+/* More visible, slow-moving light across the main visual sections. */
+.hero::after {
+  opacity: .7;
+  background:
+    radial-gradient(ellipse at 70% 28%, rgba(217, 182, 108, .2), transparent 30%),
+    radial-gradient(ellipse at 30% 75%, rgba(217, 182, 108, .12), transparent 36%);
+  background-size: 160% 160%;
+  animation: site-hero-glow 16s ease-in-out infinite alternate;
+}
+
+.statement::after {
+  opacity: .75;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 20%,
+      rgba(217, 182, 108, .12) 45%,
+      rgba(217, 182, 108, .025) 53%,
+      transparent 72%
+    );
+  background-size: 230% 100%;
+  animation: site-statement-light 15s ease-in-out infinite;
+}
+
+/* Image panels remain visually intentional if a remote image fails. */
+.gallery-card {
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(217, 182, 108, .13), transparent 58%),
+    linear-gradient(145deg, #211d14, #10100e 70%);
+}
+
+.gallery-card img {
+  min-height: 100%;
+  background: transparent;
+}
+
+@keyframes site-ambient-drift {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+    background-position: 0% 0%, 100% 20%, 40% 100%, 0 0, 70px 80px, 120px 30px, 40px 110px;
+  }
+  50% {
+    transform: translate3d(1%, 1%, 0) scale(1.025);
+  }
+  100% {
+    transform: translate3d(1.5%, 2%, 0) scale(1.045);
+    background-position: 100% 70%, 0% 80%, 80% 0%, 80px 90px, 0 10px, 20px 120px, 110px 0;
+  }
+}
+
+@keyframes site-ambient-sweep {
+  0% { background-position: 0 0, 140% 0; }
+  100% { background-position: 0 0, -100% 0; }
+}
+
+@keyframes site-hero-glow {
+  0% { background-position: 0% 30%, 100% 80%; }
+  100% { background-position: 100% 70%, 0% 15%; }
+}
+
+@keyframes site-statement-light {
+  0%, 15% { background-position: 140% 0; }
+  75%, 100% { background-position: -130% 0; }
+}
+
+@media (max-width: 680px) {
+  body::before {
+    opacity: .65;
+    background-size:
+      180% 160%, 170% 150%, 170% 170%,
+      150px 170px, 200px 210px, 230px 230px, 190px 220px;
+  }
+
+  body::after {
+    opacity: .14;
+  }
+
+  .hero::after {
+    opacity: .55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .hero::after,
+  .statement::after {
+    animation: none !important;
+  }
+}
+
+
+
+/* DJ GEMINI MOBILE PERFORMANCE TUNING */
+/* Preserve the existing visual design while reducing unnecessary repaint work. */
+
+/* Keep ambient layers within the viewport instead of oversized fixed surfaces. */
+body::before,
+body::after {
+  inset: 0;
+  will-change: auto;
+}
+
+/* Keep the ambient atmosphere moving, but avoid continuously repainting
+   complex multi-gradient backgrounds. */
+body::before {
+  animation: site-ambient-drift 36s ease-in-out infinite alternate;
+}
+
+body::after {
+  animation: site-ambient-sweep 48s ease-in-out infinite;
+}
+
+/* Use transform-only movement for the ambient drift. */
+@keyframes site-ambient-drift {
+  0% {
+    transform: translate3d(-0.5%, -0.5%, 0) scale(1);
+  }
+  100% {
+    transform: translate3d(0.5%, 0.5%, 0) scale(1.015);
+  }
+}
+
+/* Retain the light-layer animation using opacity instead of moving gradients. */
+@keyframes site-ambient-sweep {
+  0%, 100% { opacity: .12; }
+  50% { opacity: .22; }
+}
+
+/* Keep the hero lighting alive without repeatedly repainting its gradients. */
+.hero::after {
+  animation: site-hero-glow 22s ease-in-out infinite alternate;
+}
+
+@keyframes site-hero-glow {
+  0%, 100% { opacity: .42; }
+  50% { opacity: .68; }
+}
+
+/* Preserve the statement light effect with a gentle brightness change. */
+.statement::after {
+  animation: site-statement-light 24s ease-in-out infinite;
+}
+
+@keyframes site-statement-light {
+  0%, 100% { opacity: .28; }
+  50% { opacity: .62; }
+}
+
+/* Let the browser manage image layers instead of pre-promoting every image. */
+.hero-image,
+.statement-image,
+.gallery-card,
+.gallery-card img {
+  will-change: auto;
+}
+
+/* Avoid forcing a separate GPU layer for every gallery card. */
+.gallery-card {
+  transform: none;
+}
+
+/* On small screens, keep the effects but reduce their compositing workload. */
+@media (max-width: 680px) {
+  body::before {
+    opacity: .55;
+  }
+
+  body::after {
+    opacity: .12;
+  }
+
+  .hero-image {
+    animation-duration: 40s;
+  }
+
+  .statement-image {
+    animation-duration: 42s;
+  }
+}
+
+/* Honour device accessibility settings. */
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .hero-image,
+  .hero::after,
+  .hero .eyebrow > span,
+  .music::before,
+  .booking::before,
+  .statement::after,
+  .statement-image {
+    animation: none !important;
+  }
+}

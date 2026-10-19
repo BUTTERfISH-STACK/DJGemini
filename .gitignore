@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+
+# Local backups
+backup-*/
+
+# Generated files
+node_modules/
+dist/
+
+# Local backups
+backup-*/
+
+# Generated files
+node_modules/
+dist/
