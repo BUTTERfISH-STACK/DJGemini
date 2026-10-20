@@ -63,7 +63,7 @@ function App() {
     event.preventDefault()
 
     const message = [
-      'Hello DJ Gemini! I would like to enquire about a booking.',
+      'Hello DJ BLAZ3! I would like to enquire about a booking.',
       '',
       'BOOKING ENQUIRY',
       `Name: ${form.name}`,
@@ -88,10 +88,10 @@ function App() {
   return (
     <>
       <header className="header">
-        <a className="brand" href="#home" onClick={closeMenu} aria-label="DJ Gemini home">
+        <a className="brand" href="#home" onClick={closeMenu} aria-label="DJ BLAZ3 home">
           <span className="brand-mark">G<span>.</span></span>
           <span className="brand-copy">
-            <strong>DJ GEMINI</strong>
+            <strong>DJ BLAZ3</strong>
             <small>THE SOUND EXPERIENCE</small>
           </span>
         </a>
@@ -112,7 +112,7 @@ function App() {
           <a href="#experience" onClick={closeMenu}>Experience</a>
           <a href="#gallery" onClick={closeMenu}>Gallery</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
-          <a className="nav-book" href="#booking" onClick={closeMenu}>Book DJ Gemini <span>↗</span></a>
+          <a className="nav-book" href="#booking" onClick={closeMenu}>Book DJ BLAZ3 <span>↗</span></a>
         </nav>
       </header>
 
@@ -188,7 +188,7 @@ function App() {
           <p className="music-footnote">
             From Afrikaans classics and modern bangers to house, Amapiano and
             mixed party playlists, tell us the sound you want in your booking enquiry.
-            Specific songs and playlist requests can be discussed directly with DJ Gemini.
+            Specific songs and playlist requests can be discussed directly with DJ BLAZ3.
           </p>
         </section>
 
@@ -234,7 +234,7 @@ function App() {
             ))}
           </div>
           <p className="gallery-disclaimer">
-            Visuals are illustrative. Replace these images with DJ Gemini's own event photos when available.
+            Visuals are illustrative. Replace these images with DJ BLAZ3's own event photos when available.
           </p>
         </section>
 
@@ -246,7 +246,7 @@ function App() {
               <p>
                 Tell us a little about your event. Your enquiry will open in
                 WhatsApp, where you can review the details and send your
-                message directly to DJ Gemini.
+                message directly to DJ BLAZ3.
               </p>
               <p className="response-note">
                 Every enquiry is reviewed personally. Bookings are subject to availability and confirmation.
@@ -353,7 +353,7 @@ function App() {
           </div>
           <a
             className="button button-outline"
-            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello DJ Gemini, I would like to discuss a potential booking.')}`}
+            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Hello DJ BLAZ3, I would like to discuss a potential booking.')}`}
             target="_blank"
             rel="noreferrer"
           >
@@ -366,14 +366,14 @@ function App() {
         <a className="brand footer-brand" href="#home">
           <span className="brand-mark">G<span>.</span></span>
           <span className="brand-copy">
-            <strong>DJ GEMINI</strong>
+            <strong>DJ BLAZ3</strong>
             <small>THE SOUND EXPERIENCE</small>
           </span>
         </a>
         <p>GOOD MUSIC. GREAT MOMENTS.</p>
         <a className="back-top" href="#home">BACK TO TOP ↑</a>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} DJ GEMINI</span>
+          <span>© {new Date().getFullYear()} DJ BLAZ3</span>
           <span>MADE FOR THE MOMENT.</span>
         </div>
       </footer>

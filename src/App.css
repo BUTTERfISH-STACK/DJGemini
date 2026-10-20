@@ -1084,7 +1084,7 @@
 }
 
 
-/* DJ GEMINI: ambient motion and visual polish */
+/* DJ BLAZ3: ambient motion and visual polish */
 .hero {
   overflow: hidden;
 }
@@ -1454,7 +1454,7 @@ body::after {
 
 
 
-/* DJ GEMINI MOBILE PERFORMANCE TUNING */
+/* DJ BLAZ3 MOBILE PERFORMANCE TUNING */
 /* Preserve the existing visual design while reducing unnecessary repaint work. */
 
 /* Keep ambient layers within the viewport instead of oversized fixed surfaces. */
