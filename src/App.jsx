@@ -89,7 +89,9 @@ function App() {
     <>
       <header className="header">
         <a className="brand" href="#home" onClick={closeMenu} aria-label="DJ BLAZ3 home">
-          <span className="brand-mark">G<span>.</span></span>
+          <span className="brand-mark" aria-hidden="true">
+            <span className="brand-mark-b">B</span><span className="brand-mark-3">3</span>
+          </span>
           <span className="brand-copy">
             <strong>DJ BLAZ3</strong>
             <small>THE SOUND EXPERIENCE</small>
@@ -364,7 +366,9 @@ function App() {
 
       <footer className="footer">
         <a className="brand footer-brand" href="#home">
-          <span className="brand-mark">G<span>.</span></span>
+          <span className="brand-mark" aria-hidden="true">
+            <span className="brand-mark-b">B</span><span className="brand-mark-3">3</span>
+          </span>
           <span className="brand-copy">
             <strong>DJ BLAZ3</strong>
             <small>THE SOUND EXPERIENCE</small>
