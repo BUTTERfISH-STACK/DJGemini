@@ -1108,7 +1108,7 @@
 }
 
 .hero-image {
-  animation: gemini-cinematic-zoom 28s ease-in-out infinite alternate;
+  animation: blaz3-cinematic-zoom 28s ease-in-out infinite alternate;
   will-change: transform;
 }
 
@@ -1123,7 +1123,7 @@
     radial-gradient(ellipse at 72% 30%, rgba(217,182,108,.17), transparent 29%),
     radial-gradient(ellipse at 45% 75%, rgba(217,182,108,.10), transparent 35%);
   background-size: 140% 140%;
-  animation: gemini-light-drift 13s ease-in-out infinite alternate;
+  animation: blaz3-light-drift 13s ease-in-out infinite alternate;
 }
 
 .hero-content,
@@ -1134,7 +1134,7 @@
 
 .hero .eyebrow > span {
   box-shadow: 0 0 12px rgba(217,182,108,.7);
-  animation: gemini-pulse 2.4s ease-in-out infinite;
+  animation: blaz3-pulse 2.4s ease-in-out infinite;
 }
 
 .intro,
@@ -1155,7 +1155,7 @@
   height: 360px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(217,182,108,.075), transparent 68%);
-  animation: gemini-orbit-glow 15s ease-in-out infinite alternate;
+  animation: blaz3-orbit-glow 15s ease-in-out infinite alternate;
 }
 
 .music::before {
@@ -1180,7 +1180,7 @@
   pointer-events: none;
   background: linear-gradient(110deg, transparent 30%, rgba(217,182,108,.09) 50%, transparent 68%);
   background-size: 220% 100%;
-  animation: gemini-light-sweep 12s ease-in-out infinite;
+  animation: blaz3-light-sweep 12s ease-in-out infinite;
 }
 
 .statement-content {
@@ -1189,7 +1189,7 @@
 }
 
 .statement-image {
-  animation: gemini-cinematic-zoom 32s ease-in-out infinite alternate-reverse;
+  animation: blaz3-cinematic-zoom 32s ease-in-out infinite alternate-reverse;
 }
 
 .music-row {
@@ -1241,27 +1241,27 @@
   box-shadow: 0 0 24px rgba(217,182,108,.18);
 }
 
-@keyframes gemini-cinematic-zoom {
+@keyframes blaz3-cinematic-zoom {
   from { transform: scale(1); }
   to { transform: scale(1.075); }
 }
 
-@keyframes gemini-light-drift {
+@keyframes blaz3-light-drift {
   0% { transform: translate3d(-2%, -1%, 0) rotate(0deg); }
   100% { transform: translate3d(2%, 2%, 0) rotate(7deg); }
 }
 
-@keyframes gemini-orbit-glow {
+@keyframes blaz3-orbit-glow {
   0% { transform: translate3d(0, 0, 0) scale(.92); opacity: .55; }
   100% { transform: translate3d(-35px, 22px, 0) scale(1.12); opacity: 1; }
 }
 
-@keyframes gemini-light-sweep {
+@keyframes blaz3-light-sweep {
   0%, 35% { background-position: 150% 0; }
   70%, 100% { background-position: -100% 0; }
 }
 
-@keyframes gemini-pulse {
+@keyframes blaz3-pulse {
   0%, 100% { opacity: .65; }
   50% { opacity: 1; }
 }

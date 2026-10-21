@@ -198,7 +198,7 @@ function App() {
           <div className="statement-image" />
           <div className="statement-overlay" />
           <div className="statement-content">
-            <div className="section-kicker">THE GEMINI STANDARD</div>
+            <div className="section-kicker">THE BLAZ3 STANDARD</div>
             <p>GOOD MUSIC<br />IS HEARD.</p>
             <h2>GREAT MUSIC<br /><em>IS FELT.</em></h2>
             <a className="button button-gold" href="#booking">MAKE IT YOUR EVENT <span>↗</span></a>
